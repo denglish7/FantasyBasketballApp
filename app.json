@@ -1,0 +1,12 @@
+{
+  "name": "FantasyBasketballApp",
+  "displayName": "FantasyBasketballApp",
+  "expo": {
+    "name": "FantasyBasketballApp",
+    "slug": "FantasyBasketballApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
