@@ -13,60 +13,53 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        tabBarOptions={{
-          activeTintColor: '#000000',
-        }}
-      >
-        <Tab.Screen 
-          name="League" 
-          component={LeagueStackScreen}
-          options={{
-            title: 'League',
-            color: '#04009A',
-            headerStyle: styles.header,
+      <NavigationContainer>
+        <Tab.Navigator
+          tabBarOptions={{
+            activeTintColor: '#000000',
           }}
-        />
+        >
+          <Tab.Screen
+            name="League" 
+            component={LeagueStackScreen}
+            options={{
+              title: 'League'
+            }}
+          />
+          <Tab.Screen
+            name="Team" 
+            component={TeamStackScreen}
+            options={{
+              title: 'Team'
+            }}
+          />
 
-        <Tab.Screen 
-          name="Team" 
-          component={TeamStackScreen}
-          options={{
-            title: 'Team',
-            color: '#04009A',
-            headerStyle: styles.header,
-          }}
-        />
+          <Tab.Screen 
+            name="Players" 
+            component={PlayersStackScreen}
+            options={{
+              title: 'Players'
+            }}
+          />
 
-        <Tab.Screen 
-          name="Players" 
-          component={PlayersStackScreen}
-          options={{
-            title: 'Players',
-            color: '#04009A',
-            headerStyle: styles.header,
-          }}
-        />
-
-        <Tab.Screen 
-          name="Matchup" 
-          component={MatchupStackScreen}
-          options={{
-            title: 'Matchup',
-            color: '#04009A',
-            headerStyle: styles.header,
-          }}
-        />
-        
-      </Tab.Navigator>
-    </NavigationContainer>
+          <Tab.Screen 
+            name="Matchup" 
+            component={MatchupStackScreen}
+            options={{
+              title: 'Matchup'
+            }}
+          />
+          
+        </Tab.Navigator>
+      </NavigationContainer>
+    
   );
 }
 
 const LeagueStackScreen = () => {
+  const League = () => {return <LeagueScreen />}
   return (
-    <StackScreen title="League" component={LeagueScreen}/>
+    <StackScreen title="League" leagueName="Dabu League" component={League}/>
   );
 }
 

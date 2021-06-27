@@ -4,6 +4,7 @@ import { StyleSheet, View } from "react-native";
 const TeamScreen = () => {
   return (
     <View style={styles.container}>
+      
     </View>
   );
 }

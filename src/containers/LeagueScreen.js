@@ -1,22 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import { StyleSheet, View } from "react-native";
+import React from 'react';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
+import LeagueInfo from '../components/League/LeagueInfo';
 
+import * as mainStyles from '../assets/style';
+import LeagueHeaders from '../components/League/LeagueHeaders';
 
-const LeagueScreen = () => {
-
+const LeagueScreen = (props) => {
 
   return (
     <View style={styles.container}>
-
+      <LeagueHeaders />
+      <LeagueInfo />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    backgroundColor: mainStyles.MAIN_LIGHT,
+    width: '100%',
+    height: '100%',
     flexDirection: "column",
-    backgroundColor: "#77acf1"
+  },
+  title: {
+    alignItems: 'center'
+  },
+  leagueName: {
+    marginVertical: 20,
+    alignItems: 'center',
+    fontSize: 30,
+    color: mainStyles.MAIN_DARK
   }
 });
 
